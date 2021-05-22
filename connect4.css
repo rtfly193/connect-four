@@ -14,9 +14,18 @@
   width: 80%;
   height: 80%;
   border-radius: 50%;
+  animation-name: dropDown;
+  animation-duration: 1.5s;
 }
 
-
+@keyframes dropDown {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
 /* TODO: make pieces red/blue,  depending on player 1/2 piece 
 Two separate classes for red/blue, if/else-if in JS*/
 

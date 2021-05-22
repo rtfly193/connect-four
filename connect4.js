@@ -91,6 +91,16 @@ function endGame(msg) {
 /** handleClick: handle click of column top to play piece */
 
 function handleClick(evt) {
+  // check for game over
+  if (checkForWin()) {
+    endGame(`The Game is already over.`);
+    document.getElementById("board").innerHTML='';
+    board = [];
+    makeBoard();
+    makeHtmlBoard();
+    return;
+  }
+
   // get x from ID of clicked cell ('+' converts from string to a number, could also use parseInt(), Number())
   var x = +evt.target.id;
 
